@@ -25,13 +25,15 @@ class MeasurementAdapter extends TypeAdapter<Measurement> {
       sulfuricos: (fields[5] as num).toDouble(),
       observacion: fields[6] as String,
       fecha: fields[7] as DateTime,
+      latitud: (fields[8] as num).toDouble(),
+      longitud: (fields[9] as num).toDouble(),
     );
   }
 
   @override
   void write(BinaryWriter writer, Measurement obj) {
     writer
-      ..writeByte(8)
+      ..writeByte(10)
       ..writeByte(0)
       ..write(obj.oxigeno)
       ..writeByte(1)
@@ -47,7 +49,11 @@ class MeasurementAdapter extends TypeAdapter<Measurement> {
       ..writeByte(6)
       ..write(obj.observacion)
       ..writeByte(7)
-      ..write(obj.fecha);
+      ..write(obj.fecha)
+      ..writeByte(8)
+      ..write(obj.latitud)
+      ..writeByte(9)
+      ..write(obj.longitud);
   }
 
   @override

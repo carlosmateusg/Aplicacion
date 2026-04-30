@@ -29,6 +29,12 @@ class Measurement {
   @HiveField(7)
   final DateTime fecha;
 
+  @HiveField(8)
+  final double latitud;
+
+  @HiveField(9)
+  final double longitud;
+
   Measurement({
     required this.oxigeno,
     required this.metano,
@@ -38,5 +44,7 @@ class Measurement {
     required this.sulfuricos,
     required this.observacion,
     required this.fecha,
+    required this.latitud,
+    required this.longitud,
   });
 }

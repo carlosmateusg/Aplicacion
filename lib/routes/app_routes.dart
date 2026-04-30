@@ -4,6 +4,7 @@ import 'package:flutter_application_1/screens/home_screen.dart';
 import 'package:flutter_application_1/screens/login_screen.dart';
 import 'package:flutter_application_1/screens/measurement_screen.dart';
 import 'package:flutter_application_1/screens/history_screen.dart';
+import '../screens/dashboard_screen.dart';
 
 class AppRoutes {
 
@@ -11,12 +12,14 @@ class AppRoutes {
   static const String login = '/login';
   static const String measurements = '/measurements';
   static const String history = '/history'; 
+  static const String dashboard = '/dashboard';
 
   static Map<String, WidgetBuilder> routes = {
     home: (context) => HomeScreen(),
     login: (context) => LoginScreen(),
     measurements: (context) => MeasurementScreen(),
     history: (context) => HistoryScreen(),
+    dashboard: (context) => const DashboardScreen(),
   };
 
 }

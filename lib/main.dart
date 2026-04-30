@@ -7,13 +7,13 @@ import 'routes/app_routes.dart';
 void main() async {
   WidgetsFlutterBinding.ensureInitialized();
 
-  // 🔹 Inicializar Hive
+  //  Inicializar Hive
   await Hive.initFlutter();
 
-  // 🔹 Registrar adapter
+  //  Registrar adapter
   Hive.registerAdapter(MeasurementAdapter());
 
-  // 🔹 Abrir base de datos
+  //  Abrir base de datos
   await Hive.openBox<Measurement>('mediciones');
 
   runApp(const MyApp());
