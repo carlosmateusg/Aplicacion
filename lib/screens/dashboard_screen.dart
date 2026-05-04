@@ -6,9 +6,9 @@ import '../models/measurement.dart';
 class DashboardScreen extends StatelessWidget {
   const DashboardScreen({super.key});
 
-  // ---------------------------------------------------
+
   // Cuenta cuántas mediciones están en alerta
-  // ---------------------------------------------------
+  
   int contarAlertas(List<Measurement> lista) {
     int total = 0;
 
@@ -27,9 +27,8 @@ class DashboardScreen extends StatelessWidget {
     return total;
   }
 
-  // ---------------------------------------------------
+
   // Evalúa estado de una medición
-  // ---------------------------------------------------
   String estadoActual(Measurement m) {
     if (m.monoxido > 25 ||
         m.co2 > 5000 ||
@@ -87,9 +86,7 @@ class DashboardScreen extends StatelessWidget {
         child: Column(
           children: [
 
-            // --------------------------------
             // Total mediciones
-            // --------------------------------
             Card(
               child: ListTile(
                 leading: const Icon(
@@ -104,9 +101,7 @@ class DashboardScreen extends StatelessWidget {
               ),
             ),
 
-            // --------------------------------
             // Alertas detectadas
-            // --------------------------------
             Card(
               child: ListTile(
                 leading: const Icon(
@@ -120,10 +115,7 @@ class DashboardScreen extends StatelessWidget {
                 ),
               ),
             ),
-
-            // --------------------------------
             // Estado actual
-            // --------------------------------
             Card(
               child: ListTile(
                 leading: const Icon(
@@ -148,9 +140,7 @@ class DashboardScreen extends StatelessWidget {
               ),
             ),
 
-            // --------------------------------
             // Último registro
-            // --------------------------------
             Card(
               child: ListTile(
                 leading: const Icon(
@@ -170,9 +160,7 @@ class DashboardScreen extends StatelessWidget {
 
             const SizedBox(height: 20),
 
-            // --------------------------------
             // Nueva medición
-            // --------------------------------
             SizedBox(
               width: double.infinity,
 

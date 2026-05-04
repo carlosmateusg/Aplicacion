@@ -23,17 +23,15 @@ class _HistoryScreenState extends State<HistoryScreen> {
     box = Hive.box<Measurement>('mediciones');
   }
 
-  // -------------------------------------
+
   // Formato fecha
-  // -------------------------------------
+
   String formatearFecha(DateTime f) {
     return "${f.day}/${f.month}/${f.year} "
         "${f.hour}:${f.minute.toString().padLeft(2, '0')}";
   }
 
-  // -------------------------------------
   // Estado general
-  // -------------------------------------
   Color getEstado(Measurement m) {
     if (m.monoxido > 25) return Colors.red;
     if (m.co2 > 5000) return Colors.red;
